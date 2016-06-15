@@ -14,33 +14,43 @@ OpenRefine can help with data that has internal problems and is very good at fix
 -Identifying missing information
 -Enhancing data with information available elsewhere in your dataset or from an external resource.
 
-##Workshop Steps
 
 ### OpenRefine's Layout
 -Presents data in tabular format
--Each row represents a 'record' in the data
+-Each row represents a record (or part of it) in the data
 -Each column represents a type of information
 -Operations are started through column menus
-Reordering, renaming, sorting
 
-Faceting
+####Basic operations:
+Reordering / removing columns
+![reorder_column](../screenshots/reorder_column.png)
+Renaming columns
+![rename_column](../screenshots/rename_column.png)
+Sorting data
+![sort](../screenshots/sort)
+
+####Faceting
 filter data
+![facet_text](../screenshots/facet_text.png)
 include multiple values
-invert tilters
+![facet_include_multiple](../screenshots/facet_include_multiple.png)
+invert filters
+![facet_invert](../screenshots/facet_invert.png)
+
+
 Value editing through facets
-![Facet value editing](path)
+![facet_edit](../screenshots/facet_edit.png)
 Numeric and Timeline facets: these facets display graphs and not lists of values.
 Scatterplot facets display scatter graphs or charts for usually two variabes using Cartesian coordinates.
 
-Text filters
+####Text filters
 
-Filtering and Removing rows
+####Filtering and Removing rows
 
 
-###Trimming whitespace
-
-![Trimming whitespace on all values](path)
-
+###Transformations
+####Trimming whitespace
+![trim_space](../screenshots/trim_space.png)
 
 
 ###Adding a New Column based off an Existing column
