@@ -49,19 +49,17 @@ OpenRefine can help with data that has internal problems. This application is gr
 
 2) Facet on the "Content" column as well
 
-![facet_two_columns](../screenshots/facet_two_columns.png)
-
 3) If the "Content" facet does not display data, click on *Set count choice limit* to increase the number of facets allowed. For this excercise, set it up to 4000.
 
-4) Click on two or three "Path" facets and see how the results adapt in the "Content" facet panel.
+![facet_two_columns](../screenshots/facet_two_columns.png)
 
-![facet_include_multiple](../screenshots/facet_include_multiple.png)
+4) Click on two or three "Path" facets and see how the results adapt in the "Content" facet panel.
 
 5) Reset your facets (you can use the *reset* option or hover over a facet and click on *exclude*).
 
 6) Facet again, but this time on the following paths only:
-```/mods/originInfo/place/placeTerm
-/mods/subject/geographic```
+`/mods/originInfo/place/placeTerm`
+`/mods/subject/geographic`
 
 Check the "Content" data and correct a few values using facets. This option edits all instances of a value in one step. For instance, 
 
