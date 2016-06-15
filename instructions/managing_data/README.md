@@ -68,8 +68,6 @@ OpenRefine can help with data that has internal problems. This application is gr
 
 7) Check the "Content" data and correct a few values using facets. This option edits all instances of a value in one step. For example, it looks like there a few different values for "Calgary, AB". You can consolidate all values by editing the facets directly. Just click on the edit option, available from each facet:
 
-![facet_edit](../screenshots/facet_edit.png)
-
 ![facet_calgary](../screenshots/facet_calgary.png)
 
 ###Other facets
@@ -116,7 +114,7 @@ First make a new column...
 
 then apply GREL on the values you're mapping over to that new column, and give the column a name...
 
-![Editing your new column](../../Images/newColEdit.png)
+![Editing your new column](.png)
 
 That GREL code:
 
@@ -130,11 +128,11 @@ You'll still need to do some cleanup on the facets.
 
 We're going to perform a GREL update. Choose one of the columns you wish to compare (easiest if this is the column you're okay with removing if it is an entire duplicate)...
 
-![Starting a GREL Update](../../Images/grelUpdate.png)
+![Starting a GREL Update](.png)
 
 Then build an IF statement in your GREL. The format is *IF(<condition>, action if condition is true, action if condition is false)*. *value* is the value of the cell in that chosen column; cells[column_name].values brings up the value for that cell, in the same row, for a different column. So for column values comparison:
 
-![Starting a Custom Facet](../../Images/colCompare.png)
+![Starting a Custom Facet](.png)
 
 That GREL code:
 
