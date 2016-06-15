@@ -15,13 +15,15 @@ OpenRefine can help with data that has internal problems. This application is gr
 - Enhancing data with information available elsewhere in your dataset or from an external resource.
 
 
-### OpenRefine's Layout
+## OpenRefine Basics
+
+###Layout
 - Presents data in tabular format
 - Each row represents a record (or part of it) in the data
 - Each column represents a type of information
 - Operations are started through column menus
 
-####Exercise 1: Basic Operations
+###Exercise 1: Basic Operations
 1) Reorder any column and remove another (we will undo this change so don't worry about losing data).
 
 ![reorder_column](../screenshots/reorder_column.png)
@@ -42,7 +44,7 @@ OpenRefine can help with data that has internal problems. This application is gr
 
 5) Go back to the *Facet/Filter* panel.
 
-####Exercise #2: Faceting, Clustering, and Cleaning Up Data
+###Exercise #2: Faceting, Clustering, and Cleaning Up Data
 1) Facet on the "Path" column
 
 ![facet_text](../screenshots/facet_text.png)
@@ -58,32 +60,49 @@ OpenRefine can help with data that has internal problems. This application is gr
 5) Reset your facets (you can use the *reset* option or hover over a facet and click on *exclude*).
 
 6) Facet again, but this time on the following paths only:
-`/mods/originInfo/place/placeTerm`
-`/mods/subject/geographic`
 
-Check the "Content" data and correct a few values using facets. This option edits all instances of a value in one step. For instance, 
+```
+/mods/originInfo/place/placeTerm
+/mods/subject/geographic
+```
+
+7) Check the "Content" data and correct a few values using facets. This option edits all instances of a value in one step. For example, it looks like there a few different values for "Calgary, AB". You can consolidate all values by editing the facets directly. Just click on the edit option, available from each facet:
 
 ![facet_edit](../screenshots/facet_edit.png)
 
-Numeric and Timeline facets: these facets display graphs and not lists of values.
+![facet_calgary](../screenshots/facet_calgary.png)
 
-Scatterplot facets display scatter graphs or charts for usually two variabes using Cartesian coordinates.
+###Other facets
+There are many other ways to facet data
+***Numeric and Timeline*** facets needs numeric values, so text strings need to be converted to either a number or date format first. This option display graphs and not lists of values.
+
+***Scatterplot facets*** display a graphical representation of numerical values for usually two variabes using Cartesian coordinates.
+
+The ***word facet*** splits strings contained in cells into single words, counts their occurrences throughout the column, and then lists unique words and their occurrence count in the facet panel. This is a way of selecting rows where the contents of a particular column contain one or more specified words. (The user defined GREL custom text facet `split(value," ")` replicates this facet option.
+
+The ***duplicates facet*** returns boolean values of true and false; filtering on true values returns all the rows that have duplicated values within a particular column; filtering on false displays all unique rows.
+
+The ***text length*** facet produces a facet based on the character count of strings in cells within the faceted column; the custom numeric facet length(value) achieves something similar; the related measure, word count, can be achieved using the custom numeric facet `length(split(value," "))`.
+
+###Excercise 3: Clustering Facet values
+You can also use a number of clustering algorithms built into OpenRefine for seeing what values should probably be the same. 
 
 
+1) Open your relevant facet, then click on the 'Cluster' button in the top right corner of the Facets box:
 
-####Filtering and Removing rows
+![cluster](../screenshots/cluster.png)
+
+You can decide to merge matched values by checking their check box, then clicking on 'Merge Selected and Recluster'. You can change the clustering algorithms in that box as well.
+
+![cluster_actions](../screenshots/cluster_actions.png)
 
 
-###Transformations
-####Common transforms: trimming whitespace
+##Transformations
+###Excercise #4: Transforming data
 
-![trim_space](../screenshots/trim_space.png)
-
-####Transforming with GREL
+####Transforming with GREL and regular expressions
 ![transform_1](../screenshots/transform_1.png)
 ![transform_2](../screenshots/transform_2.png)
-
-GREL stands for Google Refine Expression Language or *General* Refine Expression Language. The old name was deprecated after Google stopped supporting the application and GREL.
 
 ####Transforming with GREL and regular expressions
 
@@ -125,18 +144,11 @@ if(value == cells['title'].value, value.replace(value, ''), value)
 
 Now faceted the updated column to see what values differ, and decide how to handle them.
 
-###Clustering Facet values
-
-You can also use a number of clustering algorithms built into OpenRefine for seeing what values should probably be the same. Open your relevant facet, then click on the 'Cluster' button in the top right corner of the Facets box:
-
-![Starting a Custom Facet](../../Images/facets.png)
-
-You can decide to merge matched values by checking their check box, then clicking on 'Merge Selected and Recluster'. You can change the clustering algorithms in that box as well.
-
-![Starting a Custom Facet](../../Images/cluster.png)
 
 
 ##Sources:
 http://enipedia.tudelft.nl/wiki/OpenRefine_Tutorial
+
 http://www.meanboyfriend.com/overdue_ideas/wp-content/uploads/2014/11/Introduction-to-OpenRefine-handout-CC-BY.pdf
+
 https://github.com/LODLAM/LODLAMTO16/tree/master/OpenRefine_Tutorial/Instructions/Cleaning
