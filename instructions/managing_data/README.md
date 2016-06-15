@@ -1,4 +1,4 @@
-#Normalization of Data in OpenRefine
+#Data Normalization in OpenRefine
 
 ##General Normalization Functions
 
@@ -6,41 +6,47 @@ OpenRefine can help with data that has internal problems and is very good at fix
 
 ##Common scenarios
 
--Identifying unique values accross a dataset
--Identifying how many instances of a value exist in a dataset
--Identifying values that refer to the same concept (people, places, dates, etc.) but that are expressed inconsistently
--Separating values grouped together in a single cell
--Reformatting value structures
--Identifying missing information
--Enhancing data with information available elsewhere in your dataset or from an external resource.
+- Identifying unique values accross a dataset
+- Identifying how many instances of a value exist in a dataset
+- Identifying values that refer to the same concept (people, places, dates, etc.) but that are expressed inconsistently
+- Separating values grouped together in a single cell
+- Reformatting value structures
+- Identifying missing information
+- Enhancing data with information available elsewhere in your dataset or from an external resource.
 
 
 ### OpenRefine's Layout
--Presents data in tabular format
--Each row represents a record (or part of it) in the data
--Each column represents a type of information
--Operations are started through column menus
+- Presents data in tabular format
+- Each row represents a record (or part of it) in the data
+- Each column represents a type of information
+- Operations are started through column menus
 
 ####Basic operations:
 Reordering / removing columns
 ![reorder_column](../screenshots/reorder_column.png)
+
 Renaming columns
 ![rename_column](../screenshots/rename_column.png)
+
 Sorting data
 ![sort](../screenshots/sort)
 
 ####Faceting
 filter data
 ![facet_text](../screenshots/facet_text.png)
+
 include multiple values
 ![facet_include_multiple](../screenshots/facet_include_multiple.png)
+
 invert filters
 ![facet_invert](../screenshots/facet_invert.png)
 
 
 Value editing through facets
 ![facet_edit](../screenshots/facet_edit.png)
+
 Numeric and Timeline facets: these facets display graphs and not lists of values.
+
 Scatterplot facets display scatter graphs or charts for usually two variabes using Cartesian coordinates.
 
 ####Text filters
