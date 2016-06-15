@@ -2,7 +2,7 @@
 
 ##General Normalization Functions
 
-OpenRefine can help with data that has internal problems and is very good at fixing them while also considering the complete set of values in a dataset. You can also enhance your data by bringing information from other sources.
+OpenRefine can help with data that has internal problems. The way that the application ixing them while also considering the complete set of values in a dataset. You can also enhance your data by bringing information from other sources.
 
 ##Common scenarios
 
@@ -21,33 +21,47 @@ OpenRefine can help with data that has internal problems and is very good at fix
 - Each column represents a type of information
 - Operations are started through column menus
 
-####Basic operations:
-Reordering / removing columns
+####Exercise 1: Basic Operations
+1) Reorder the column "Collection" and remove the column "Form or Genre" (we will undo this change so don't worry about losing data).
 
 ![reorder_column](../screenshots/reorder_column.png)
+![reorder_remove](../screenshots/reorder_remove.png)
 
-Renaming columns
+2) Rename the column "Ocurrence" to "Any Name"
 
 ![rename_column](../screenshots/rename_column.png)
 
-Sorting data
+3) Undo the previous two actions by going to the *Undo/Redo* panel in the upper left corner, and clicking on the first project state (Create project) or the last action you want to go back to. Changes will be applied automatically.
+
+![undo](../screenshots/undo.png)
+
+
+4) Sort data based on any of the columns. 
 
 ![sort](../screenshots/sort.png)
 
-####Faceting
-Filtering data
+5) Go back to the *Facet/Filter* panel.
+
+####Exercise #2: Faceting, Clustering, and Cleaning Up Data
+1) Facet on the Path column
 
 ![facet_text](../screenshots/facet_text.png)
 
-Including multiple facets
+2) Facet on the Content column as well
+
+![facet_two_columns](../screenshots/facet_two_columns.png)
+
+3) If the Content facet does not display data, click on *Set count choice limit* to increase the number of facets allowed. For this excercise, set it up to 4000.
+
+4) Click on two or three *Path* facets and see how the results adapt in the *Content* facet panel.
 
 ![facet_include_multiple](../screenshots/facet_include_multiple.png)
 
-Inverting filters
+5) You can invert your filters by clicking on the 
 
 ![facet_invert](../screenshots/facet_invert.png)
 
-Value editing through facets
+Value editing through facets. This option edits all instances of a value in one step:
 
 ![facet_edit](../screenshots/facet_edit.png)
 
@@ -55,21 +69,31 @@ Numeric and Timeline facets: these facets display graphs and not lists of values
 
 Scatterplot facets display scatter graphs or charts for usually two variabes using Cartesian coordinates.
 
-####Text filters
+
 
 ####Filtering and Removing rows
 
 
 ###Transformations
-####Trimming whitespace
+####Common transforms: trimming whitespace
+
 ![trim_space](../screenshots/trim_space.png)
+
+####Transforming with GREL
+![transform_1](../screenshots/transform_1.png)
+![transform_2](../screenshots/transform_2.png)
+
+GREL stands for Google Refine Expression Language or *General* Refine Expression Language. The old name was deprecated after Google stopped supporting the application and GREL.
+
+####Transforming with GREL and regular expressions
+
 
 
 ###Adding a New Column based off an Existing column
 
 First make a new column...
 
-![Adding a new column](../../Images/newCol.png)
+![add_column](../screenshots/add_column.png)
 
 then apply GREL on the values you're mapping over to that new column, and give the column a name...
 
