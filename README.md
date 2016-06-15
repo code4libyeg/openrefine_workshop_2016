@@ -13,16 +13,16 @@ Please have OpenRefine installed. Instructions for installation are available at
 1. Introduction to OpenRefine
     2. About
     3. Extensions
-2. Creating Project and Import Data
+2. [Creating Project and Import Data](https://github.com/code4libyeg/openrefine_workshop_2016/tree/master/instructions/import_create)
     3. CSV, Google Sheets
     4. JSON, XML
     5. RDF/XML, RDF Ntriples
-3. Data Cleaning and Normalization
+3. [Data Cleaning and Normalization](https://github.com/code4libyeg/openrefine_workshop_2016/tree/master/instructions/managing_data)
     4. Faceting
     5. Clustering
     6. GREL
-5. Data Reconciliation
-6. Geocoding
+5. [Data Reconciliation]()
+6. [Geocoding](https://github.com/code4libyeg/openrefine_workshop_2016/tree/master/instructions/geocoding)
 7. Questions + Comments (also can ask through out workshop)
 
 ##Tutorial Project
