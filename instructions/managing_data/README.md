@@ -23,26 +23,32 @@ OpenRefine can help with data that has internal problems and is very good at fix
 
 ####Basic operations:
 Reordering / removing columns
+
 ![reorder_column](../screenshots/reorder_column.png)
 
 Renaming columns
+
 ![rename_column](../screenshots/rename_column.png)
 
 Sorting data
-![sort](../screenshots/sort)
+
+![sort](../screenshots/sort.png)
 
 ####Faceting
-filter data
+Filtering data
+
 ![facet_text](../screenshots/facet_text.png)
 
-include multiple values
+Including multiple facets
+
 ![facet_include_multiple](../screenshots/facet_include_multiple.png)
 
-invert filters
+Inverting filters
+
 ![facet_invert](../screenshots/facet_invert.png)
 
-
 Value editing through facets
+
 ![facet_edit](../screenshots/facet_edit.png)
 
 Numeric and Timeline facets: these facets display graphs and not lists of values.
