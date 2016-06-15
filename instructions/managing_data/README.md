@@ -2,7 +2,7 @@
 
 ##General Normalization Functions
 
-OpenRefine can help with data that has internal problems. The way that the application ixing them while also considering the complete set of values in a dataset. You can also enhance your data by bringing information from other sources.
+OpenRefine can help with data that has internal problems. This application is great at fixing those problems while also considering the complete set of values in a dataset. You can also enhance your data by bringing information from other sources.
 
 ##Common scenarios
 
