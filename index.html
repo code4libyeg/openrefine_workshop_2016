@@ -68,16 +68,32 @@
 					<li>Easy-to-learn scripting language
 					</ul>
                                   </section>
+				  <section>
+                                        <h3>GREL</h3>
+                                        <ul>
+                                                <li>GREL is the main language supported in Open Refine to allow you write powerful yet simple query to filter and transform data.</li>
+                                                <li>You can access GREL from different menus
+                                        <ul>
+                                        <li>Creating a custom text facet</li>
+                                        <li>Transforming column using transformation function</li>
+                                        <li>Adding a column based on existing column or by fetching URL</li>
+                                        </ul>
+                                        </li>
+                                        </ul>
+                                  </section>
+				  <section>
+                                        <h3>GREL Basic Functions</h3>
+                                        <ul>
+                                        <li>Support inside out: trim(toLowercase(value)) or in sequence syntax: value.toLowercase().trim()</li>
+                                        <li>Call content from current column: <i>value</i></li>
+                                        <li>Call content from another column: <i>cells['column_name'].value</i></li>
+                                        <li>To input text, directly place it between single or double quote</li>
+                                        </ul>
+                                  </section>
 				</section>
 
 				<section>
-					<h2>Start a OpenRefine Project from your API results</h2>
-                                     <section>
-					<p>
-					An API request to Google Places to search places of type "food" within 200 meter radius of University of Alberta:
-                                        <a href="https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=53.5235571,-113.5239325&radius=200&types=food&key=AIzaSyD-aV4ZDVgfqqNMC78UiKjpp65VOOmGrDM">https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=53.5235571,-113.5239325&radius=200&types=food&key=AIzaSyD-aV4ZDVgfqqNMC78UiKjpp65VOOmGrDM</a>
-					</p>
-                                     </section>
+					<h2>Start a Open Refine Project</h2>
         			     <section>
                                          <img data-src="images/create_new.png">
 				     </section>
