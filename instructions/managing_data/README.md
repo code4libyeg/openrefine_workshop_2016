@@ -16,12 +16,13 @@ OpenRefine can help with data that has internal problems. This application is gr
 
 
 ##Sample dataset
-For this workshop we will use an adapted version of the [Peel's Prairie Provinces](http://peel.library.ualberta.ca/index.html) metadata. This dataset contains a subset of metadata for the Maps and Postcards collections.
+For this workshop we will use an adapted version of the [Peel's Prairie Provinces](http://peel.library.ualberta.ca/index.html) metadata. This dataset contains a subset of metadata for the Postcards and Maps collections.
 
-![](../screenshots/maps.png)
 ![](../screenshots/postcards.png)
+![](../screenshots/maps.png)
 
 Our end goal is to prepare the dataset for visualization in Tableau. To do so we will:
+
 1) normalize and clean up the data
 2) reconcile names against an external source
 3) geocode a subset of the dataset
@@ -61,24 +62,22 @@ Our end goal is to prepare the dataset for visualization in Tableau. To do so we
 
 ![facet_text](../screenshots/facet_text.png)
 
-2) Facet on the "Content" column as well
-
-3) If the "Content" facet does not display data, click on *Set count choice limit* to increase the number of facets allowed. For this excercise, set it up to 4000.
+2) Facet on the "Content" column as well. If this facet does not display data, click on *Set count choice limit* to increase the number of facets allowed. For this excercise, set it up to 4000.
 
 ![facet_two_columns](../screenshots/facet_two_columns.png)
 
-4) Click on two or three "Path" facets and see how the results adapt in the "Content" facet panel.
+3) Click on two or three "Path" facets and see how the results adapt in the "Content" facet panel.
 
-5) Reset your facets (you can use the *reset* option or hover over a facet and click on *exclude*).
+4) Reset your facets (you can use the *reset* option or hover over a facet and click on *exclude*).
 
-6) Facet again, but this time we want to get all geographical names in the dataset. To do that, facet on the following paths only:
+5) Facet again, but this time we want to get all geographical names in the dataset. To do that, facet on the following paths only:
 
 ```
 /mods/originInfo/place/placeTerm
 /mods/subject/geographic
 ```
 
-7) Check the "Content" data and correct a few values using facets. This option edits all instances of a value in one step. For example, it looks like there a few different values for "Calgary, AB". You can consolidate all values by editing the facets directly. Just click on the edit option, available from each facet:
+6) Check the "Content" data and correct a few values using facets. This option edits all instances of a value in one step. For example, it looks like there a few different values for "Calgary, AB". You can consolidate all values by editing the facets directly. Just click on the edit option, available from each facet:
 
 ![facet_calgary](../screenshots/facet_calgary.png)
 
@@ -108,51 +107,41 @@ You can decide to merge matched values by checking their check box, then clickin
 
 
 ##Transformations
-###Excercise #4: Transforming data
+###Excercise #4: Transforming data with GREL and regular expressions
 
-####Transforming with GREL and regular expressions
+1) Start by executing a replace action. The column "Path" contains full MODS 'routes' for each data field. The root element 'mods' is redundant, so to make the paths a bit easier to read, we can apply a GREL transformation. In this column's menu select ***Edit cells > Transform...***
+
 ![transform_1](../screenshots/transform_1.png)
+
+Then use the GREL expression `value.replace("/mods/","")`. This expression is asking to replace the string `/mods/` with an empty string. Note that the preview column shows sample results before applying the expression to the complete column.
+
 ![transform_2](../screenshots/transform_2.png)
 
-####Transforming with GREL and regular expressions
+Click OK to apply.
 
 
+2) In this step we will learn how to add a new column bsaed on an existing column. For the visualization, we need to split the values in the "Path" column into two separate columns. The first should contain the top parent element (e.g. name) and the second the rest of the path value (e.g. namePart).
 
-###Adding a New Column based off an Existing column
-
-First make a new column...
+First make a new column:
 
 ![add_column](../screenshots/add_column.png)
 
-then apply GREL on the values you're mapping over to that new column, and give the column a name...
+Then apply one of the GREL expressions:
 
-![Editing your new column](.png)
+`value.replace(/(.*?)\/(.*)/,"$1")`
+or
+`value.match(/(.*?)\/.*/)[0]`
 
-That GREL code:
+The first expression is setting an instruction to take the original value and then *replace* the full string with the first captured group (string before the first `/`), while the second GREL is *matching* the value before the first `/` and dismissing the rest of the data. 
 
-```
-value.replace('?', '').replace('-', '/')
-```
+Set the new column name as "parent" and click "OK".
 
-You'll still need to do some cleanup on the facets.
+![](add_column_parent.png)
 
-###Compare Values in 2 columns
+***3) Adapt the previous step to create another column also based on the "Path" column, but this time, we need to copy the second part of the value, i.e. the descendant elements of the parent node***
 
-We're going to perform a GREL update. Choose one of the columns you wish to compare (easiest if this is the column you're okay with removing if it is an entire duplicate)...
 
-![Starting a GREL Update](.png)
 
-Then build an IF statement in your GREL. The format is *IF(<condition>, action if condition is true, action if condition is false)*. *value* is the value of the cell in that chosen column; cells[column_name].values brings up the value for that cell, in the same row, for a different column. So for column values comparison:
-
-![Starting a Custom Facet](.png)
-
-That GREL code:
-
-```
-if(value == cells['title'].value, value.replace(value, ''), value)
-```
-
-Now faceted the updated column to see what values differ, and decide how to handle them.
 
 
 
