@@ -18,8 +18,8 @@ OpenRefine can help with data that has internal problems. This application is gr
 ##Sample dataset
 For this workshop we will use an adapted version of the [Peel's Prairie Provinces](http://peel.library.ualberta.ca/index.html) metadata. This dataset contains a subset of metadata for the Maps and Postcards collections.
 
-!(../screenshots/maps.png)
-!(../screenshots/postcards.png)
+![](../screenshots/maps.png)
+![](../screenshots/postcards.png)
 
 Our end goal is to prepare the dataset for visualization in Tableau. To do so we will:
 1) normalize and clean up the data
