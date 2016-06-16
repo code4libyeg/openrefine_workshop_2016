@@ -146,7 +146,7 @@ The first expression (`replace()`) is setting an instruction to take the origina
 
 Set the new column name as "parent" and click "OK".
 
-**3) Adapt the previous step to create another column also based on the "Path" column, but this time, we need to copy the *second* part of the value, i.e. the descendant elements of the parent node** You can use an adapted version of the `replace()` or `match()` expressions above. Alternatively, you can use `rpartition()`, which returns the substring *after the first occurrence* of a given string.
+**3) Adapt the previous step to create another column also based on the "Path" column, but this time, we need to copy the *second* part of the value, i.e. the descendant elements of the parent node** You can use an adapted version of the `replace()`, `match()`, or `partition()` expressions above. [Answers available here](answers)
 
 
 
