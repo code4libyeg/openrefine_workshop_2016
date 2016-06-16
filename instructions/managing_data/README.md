@@ -126,17 +126,19 @@ First make a new column:
 
 ![add_column](../screenshots/add_column.png)
 
-Then apply one of the GREL expressions:
+Then apply either of the following GREL expressions (same result):
 
 `value.replace(/(.*?)\/(.*)/,"$1")`
+
 or
+
 `value.match(/(.*?)\/.*/)[0]`
 
 The first expression is setting an instruction to take the original value and then *replace* the full string with the first captured group (string before the first `/`), while the second GREL is *matching* the value before the first `/` and dismissing the rest of the data. 
 
-Set the new column name as "parent" and click "OK".
-
 ![add_column_parent](../screenshots/add_column_parent.png)
+
+Set the new column name as "parent" and click "OK".
 
 **3) Adapt the previous step to create another column also based on the "Path" column, but this time, we need to copy the second part of the value, i.e. the descendant elements of the parent node**
 
