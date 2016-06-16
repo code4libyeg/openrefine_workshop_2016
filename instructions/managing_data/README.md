@@ -2,7 +2,7 @@
 
 ##General Normalization Functions
 
-OpenRefine can help with data that has internal problems. This application is great at fixing those problems while also considering the complete set of values in a dataset. You can also enhance your data by bringing information from other sources.
+OpenRefine can help with data that has internal problems. This application is great at fixing those problems while also considering the complete set of values in a dataset. Enhancing data with OpenRefine by bringing information from other sources is also possible and there are many ways to do that, like integrating data from other columns or fetching information from external services.
 
 ##Common scenarios
 
@@ -13,6 +13,18 @@ OpenRefine can help with data that has internal problems. This application is gr
 - Reformatting value structures
 - Identifying missing information
 - Enhancing data with information available elsewhere in your dataset or from an external resource.
+
+
+##Sample dataset
+For this workshop we will use an adapted version of the [Peel's Prairie Provinces](http://peel.library.ualberta.ca/index.html) metadata. This dataset contains a subset of metadata for the Maps and Postcards collections.
+
+!(../screenshots/maps.png)
+!(../screenshots/postcards.png)
+
+Our end goal is to prepare the dataset for visualization in Tableau. To do so we will:
+1) normalize and clean up the data
+2) reconcile names against an external source
+3) geocode a subset of the dataset
 
 
 ## OpenRefine Basics
@@ -59,7 +71,7 @@ OpenRefine can help with data that has internal problems. This application is gr
 
 5) Reset your facets (you can use the *reset* option or hover over a facet and click on *exclude*).
 
-6) Facet again, but this time on the following paths only:
+6) Facet again, but this time we want to get all geographical names in the dataset. To do that, facet on the following paths only:
 
 ```
 /mods/originInfo/place/placeTerm
