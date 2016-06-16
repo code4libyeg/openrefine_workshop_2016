@@ -144,7 +144,7 @@ Set the new column name as "parent" and click "OK".
 
 
 
-
+[Next: Data Reconciliation](https://github.com/code4libyeg/openrefine_workshop_2016/tree/master/instructions/reconciliation)
 
 
 ##Sources:
