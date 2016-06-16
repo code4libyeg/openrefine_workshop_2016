@@ -136,7 +136,7 @@ The first expression is setting an instruction to take the original value and th
 
 Set the new column name as "parent" and click "OK".
 
-![add_column_parent](add_column_parent.png)
+![add_column_parent](../screenshots/add_column_parent.png)
 
 **3) Adapt the previous step to create another column also based on the "Path" column, but this time, we need to copy the second part of the value, i.e. the descendant elements of the parent node**
 
