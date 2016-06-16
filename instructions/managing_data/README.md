@@ -16,16 +16,18 @@ OpenRefine can help with data that has internal problems. This application is gr
 
 
 ##Sample dataset
-For this workshop we will use an adapted version of the [Peel's Prairie Provinces](http://peel.library.ualberta.ca/index.html) metadata. This dataset contains a subset of metadata for the Postcards and Maps collections.
+For this workshop we will use an adapted version of the [Peel's Prairie Provinces](http://peel.library.ualberta.ca/index.html) metadata. The original metadata is in MODS XML format, but for an oncoming project we extracted each field, its content and some context separately as a tab-separated value file. In other words, we 'flattened' the data by making one tabular record for each instance of each field.
+
+Because Peel collections include a very large amount of objects we extracted a sub-subset of the dataset that contains selected fields for the Postcards and Maps collections only.
 
 ![](../screenshots/postcards.png)
 ![](../screenshots/maps.png)
 
 Our end goal is to prepare the dataset for visualization in Tableau. To do so we will:
 
-1. normalize and clean up the data
+1. normalize and clean up the Peel metadata
 2. reconcile names against an external source
-3. geocode a subset of the dataset
+3. geocode places of publication
 
 
 ## OpenRefine Basics
@@ -134,13 +136,17 @@ or
 
 `value.match(/(.*?)\/.*/)[0]`
 
-The first expression is setting an instruction to take the original value and then *replace* the full string with the first captured group (string before the first `/`), while the second GREL is *matching* the value before the first `/` and dismissing the rest of the data. 
+or
+
+`value.partition(/\//)[0]`
+
+The first expression is setting an instruction to take the original value and then *replace* the full string with the first captured group (string before the first `/`). The second GREL is *matching* the value before the first `/` and dismissing the rest of the data. The third GREL returns the substring *before the first occurrence* of `/`.
 
 ![add_column_parent](../screenshots/add_column_parent.png)
 
 Set the new column name as "parent" and click "OK".
 
-**3) Adapt the previous step to create another column also based on the "Path" column, but this time, we need to copy the second part of the value, i.e. the descendant elements of the parent node**
+**3) Adapt the previous step to create another column also based on the "Path" column, but this time, we need to copy the *second* part of the value, i.e. the descendant elements of the parent node** You can use an adapted version of the `replace()` or `match()` expressions above. Alternatively, you can use `rpartition()`, which returns the substring *after the first occurrence* of a given string.
 
 
 
