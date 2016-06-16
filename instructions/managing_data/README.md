@@ -37,47 +37,47 @@ Our end goal is to prepare the dataset for visualization in Tableau. To do so we
 - Operations are started through column menus
 
 ###Exercise 1: Basic Operations
-1. Reorder any column and remove another (we will undo this change so don't worry about losing data).
+1) Reorder any column and remove another (we will undo this change so don't worry about losing data).
 
 ![reorder_column](../screenshots/reorder_column.png)
 ![reorder_remove](../screenshots/reorder_remove.png)
 
-2. Rename the column "Ocurrence" to "Any Name"
+2) Rename the column "Ocurrence" to "Any Name"
 
 ![rename_column](../screenshots/rename_column.png)
 
-3. Undo the previous two actions by going to the *Undo/Redo* panel in the upper left corner, and clicking on the first project state (Create project) or the last action you want to go back to. Changes will be applied automatically.
+3) Undo the previous two actions by going to the *Undo/Redo* panel in the upper left corner, and clicking on the first project state (Create project) or the last action you want to go back to. Changes will be applied automatically.
 
 ![undo](../screenshots/undo.png)
 
 
-4. Sort data based on any of the columns. 
+4) Sort data based on any of the columns. 
 
 ![sort](../screenshots/sort.png)
 
-5. Go back to the *Facet/Filter* panel.
+5) Go back to the *Facet/Filter* panel.
 
 ###Exercise #2: Faceting, Clustering, and Cleaning Up Data
-1. Facet on the "Path" column
+1) Facet on the "Path" column
 
 ![facet_text](../screenshots/facet_text.png)
 
-2. Facet on the "Content" column as well. If this facet does not display data, click on *Set count choice limit* to increase the number of facets allowed. For this excercise, set it up to 4000.
+2) Facet on the "Content" column as well. If this facet does not display data, click on *Set count choice limit* to increase the number of facets allowed. For this excercise, set it up to 4000.
 
 ![facet_two_columns](../screenshots/facet_two_columns.png)
 
-3. Click on two or three "Path" facets and see how the results adapt in the "Content" facet panel.
+3) Click on two or three "Path" facets and see how the results adapt in the "Content" facet panel.
 
-4. Reset your facets (you can use the *reset* option or hover over a facet and click on *exclude*).
+4) Reset your facets (you can use the *reset* option or hover over a facet and click on *exclude*).
 
-5. Facet again, but this time we want to get all geographical names in the dataset. To do that, facet on the following paths only:
+5) Facet again, but this time we want to get all geographical names in the dataset. To do that, facet on the following paths only:
 
 ```
 /mods/originInfo/place/placeTerm
 /mods/subject/geographic
 ```
 
-6. Check the "Content" data and correct a few values using facets. This option edits all instances of a value in one step. For example, it looks like there a few different values for "Calgary, AB". You can consolidate all values by editing the facets directly. Just click on the edit option, available from each facet:
+6) Check the "Content" data and correct a few values using facets. This option edits all instances of a value in one step. For example, it looks like there a few different values for "Calgary, AB". You can consolidate all values by editing the facets directly. Just click on the edit option, available from each facet:
 
 ![facet_calgary](../screenshots/facet_calgary.png)
 
@@ -97,7 +97,7 @@ The **text length** facet produces a facet based on the character count of strin
 You can also use a number of clustering algorithms built into OpenRefine for seeing what values should probably be the same. 
 
 
-1. Open your relevant facet, then click on the 'Cluster' button in the top right corner of the Facets box:
+1) Open your relevant facet, then click on the 'Cluster' button in the top right corner of the Facets box:
 
 ![cluster](../screenshots/cluster.png)
 
@@ -109,7 +109,7 @@ You can decide to merge matched values by checking their check box, then clickin
 ##Transformations
 ###Excercise #4: Transforming data with GREL and regular expressions
 
-1. Start by executing a replace action. The column "Path" contains full MODS 'routes' for each data field. The root element 'mods' is redundant, so to make the paths a bit easier to read, we can apply a GREL transformation. In this column's menu select **Edit cells > Transform...**
+1) Start by executing a replace action. The column "Path" contains full MODS 'routes' for each data field. The root element 'mods' is redundant, so to make the paths a bit easier to read, we can apply a GREL transformation. In this column's menu select **Edit cells > Transform...**
 
 ![transform_1](../screenshots/transform_1.png)
 
@@ -120,7 +120,7 @@ Then use the GREL expression `value.replace("/mods/","")`. This expression is as
 Click OK to apply.
 
 
-2. In this step we will learn how to add a new column bsaed on an existing column. For the visualization, we need to split the values in the "Path" column into two separate columns. The first should contain the top parent element (e.g. name) and the second the rest of the path value (e.g. namePart).
+2) In this step we will learn how to add a new column bsaed on an existing column. For the visualization, we need to split the values in the "Path" column into two separate columns. The first should contain the top parent element (e.g. name) and the second the rest of the path value (e.g. namePart).
 
 First make a new column:
 
@@ -136,9 +136,9 @@ The first expression is setting an instruction to take the original value and th
 
 Set the new column name as "parent" and click "OK".
 
-![](add_column_parent.png)
+![add_column_parent](add_column_parent.png)
 
-3. *Adapt the previous step to create another column also based on the "Path" column, but this time, we need to copy the second part of the value, i.e. the descendant elements of the parent node**
+**3) Adapt the previous step to create another column also based on the "Path" column, but this time, we need to copy the second part of the value, i.e. the descendant elements of the parent node**
 
 
 
