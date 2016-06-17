@@ -146,7 +146,7 @@ The first expression (`replace()`) is setting an instruction to take the origina
 
 Set the new column name as "parent" and click "OK".
 
-**3) Adapt the previous step to create another column also based on the "Path" column, but this time, we need to copy the *second* part of the value, i.e. the descendant elements of the parent node** You can use an adapted version of the `replace()`, `match()`, or `partition()` expressions above. [Answers available here](answers)
+**3) Adapt the previous step to create another column also based on the "Path" column, but this time, we need to copy the *second* part of the value, i.e. the descendant elements of the parent node** You can use an adapted version of the `replace()`, `match()`, or `partition()` expressions above. [Answers available here.](https://github.com/code4libyeg/openrefine_workshop_2016/blob/master/instructions/managing_data/answers.md)
 
 
 
