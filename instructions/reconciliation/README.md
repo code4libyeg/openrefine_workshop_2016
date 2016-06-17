@@ -9,13 +9,13 @@ There are many ways to work on data reconciliation with OpenRefine:
 
 
 ##Dataset
-Import the [Peel Author Names and Pseudonyms OpenRefine project] available from [https://github.com/code4libyeg/openrefine_workshop_2016/blob/master/Data/Peel-Author-Names-and-Pseudonyms.openrefine.tar.gz](https://github.com/code4libyeg/openrefine_workshop_2016/blob/master/Data/Peel-Author-Names-and-Pseudonyms.openrefine.tar.gz). This dataset contains author names, pseudonyms, and biographical information from the Peel Monographs and Serials special collection.
+Import the [Peel Author Names and Pseudonyms OpenRefine project](https://github.com/code4libyeg/openrefine_workshop_2016/blob/master/Data/Peel-Author-Names-and-Pseudonyms.openrefine.tar.gz) available from [https://github.com/code4libyeg/openrefine_workshop_2016/blob/master/Data/Peel-Author-Names-and-Pseudonyms.openrefine.tar.gz](https://github.com/code4libyeg/openrefine_workshop_2016/blob/master/Data/Peel-Author-Names-and-Pseudonyms.openrefine.tar.gz). This dataset contains author names, pseudonyms, and biographical information from the Peel Monographs and Serials special collection.
 
 
 ##Reconciling author names using Open Refine and VIAF
 For this exercise we will call a service that can be used to reconcile author names. It uses the Virtual International Authority File (VIAF) API. Using this service we can match authors to VIAF identifiers, widely used in Wikipedia pages and many libraries.
 
-To get started, in the column "Authority", go to the **Edit cell > Reconcile** tool.
+To get started, in the column "Authority", go to the **Edit cell > Reconcile** tool and click on **Start Reconciling**.
 
 ![](../screenshots/start_reconciling.png)
 
@@ -26,10 +26,18 @@ In the reconcile window Add the service:
 
 It might take a while to connect to the service.
 
-In the reconcile window you will see options to use data from other columns and to map those columns to specific ontology types. As you type you will see suggestions based on your input that display infoboxes for suggested ontology classes or subclasses. For this excercise, select the following options and classs:
-1. Reconcile against type: Author
-2. Select the columns 'pseudonym', 'bio', 'dates'.
-3. Click on **Start Reconciling**. It should take around 3 - 4 minutes to complete.
+In the box "Also use relevant details from other columns" slect the columns 'pseudonym', 'bio', and 'dates'.
+
+>###Ontology Mappings (optional)
+>In the reconcile window you will see options to use data from other columns and to map those columns to specific ontology types. Even though the Freebase service is no longer available, mappings against freebase ontology namespaces is not affected. This means that if the resource you are reconciling against has Freebase mappings, then using the available options that map your columns to Freebase namespaces will help in having better reconciliation results. If the registry you are reconciling against does not have the Freebase mappings, then it will not matter.
+
+>For this excercise you can just select the columns to be included in your request () without mapping them, but if you want to see how the mapping works, you are welcome to try it out. As you type you will see suggestions based on your input that display infoboxes for suggested ontology classes or subclasses. For this excercise, select the following options and class:
+>1. Reconcile against type: **Author**
+>2. Map pseudonym, bio, and dates to any ontology namespace you consider a match.
+
+>![](../screenshots/pseudonym.png)
+
+Finally, click on **Start Reconciling**. It should take around 3 - 4 minutes to complete.
 
 Results:
 **Result percentages** are displayed in the form of a completion bar within the column header. If you hover over the bar, you can see the numeric values.
@@ -49,6 +57,10 @@ Go ahead and evaluate the reconciliation results by checking that matches are ac
 - match this option to this and all identical cells [](../screenshots/double_check.png)
 - to verify an identity you can follow the link to any suggested match and check the VIAF page for the record.
 
-Once you have reconciled the data you may want to do something with the reconciliation. 
+Once you have reconciled the data you may want to do something with the reconciliation. Let's extract some of the reconciliated data stored as part of each result.
 
-In the box labelled Expression enter cell.recon.match.id and give the column a name 
+Go to **Edit column > Add column based on this column**. In the box **Expression** enter `cell.recon.match.id` and give the column a name.
+
+You can extract more variables from the reconciled data. Variables are listed here: (https://github.com/OpenRefine/OpenRefine/wiki/Variables).
+
+Feel free to create more columns and try to extract different reconiled values into new columns.
