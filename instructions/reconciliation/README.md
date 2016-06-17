@@ -63,4 +63,4 @@ Go to **Edit column > Add column based on this column**. In the box **Expression
 
 You can extract more variables from the reconciled data. Variables are listed here: (https://github.com/OpenRefine/OpenRefine/wiki/Variables).
 
-Feel free to create more columns and try to extract different reconiled values into new columns.
+Feel free to create more columns and try to extract different values into new columns.
