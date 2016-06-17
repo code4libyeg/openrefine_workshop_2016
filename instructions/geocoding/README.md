@@ -62,13 +62,13 @@ Steps to use other geocoding services are exactly the same as above.
 
 API request for MapQuest Nominatim:
 
-```'http://open.mapquestapi.com/nominatim/v1/search.php?key=YOUR_KEY_HERE&format=json&q=' + escape(value, 'url')```
+'http://open.mapquestapi.com/nominatim/v1/search.php?key=YOUR_KEY_HERE&format=json&q=' + escape(value, 'url')
 
 
 ####[Geonames](http://www.geonames.org/export/geonames-search.html)
 
 Geonames data is free, and with cc-by license. It has a 30,000 daily limit per application (identified by the parameter 'username'), and 2000 requests per hour.
 API request for Geonames
-```http://api.geonames.org/search?name=Edmonton&username=demo```
+http://api.geonames.org/search?name=Edmonton&username=demo
 
 #####Exercise 3 Geocode a location with another Geocoding service
