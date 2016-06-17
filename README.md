@@ -7,7 +7,7 @@
 This tutorial is an introduction to OpenRefine, an open source tool for working with messy data. The workshop will walk through the work to normalize, transform and extend the data with web services and external data. Participants are strongly encouraged to install OpenRefine and follow along. 
 
 ##Workshop Requirements
-Please have OpenRefine installed. Instructions for installation are available at [Installation](Installation/README.md). If you run into any issues with installation, please get in touch with [us](mailto:weiwei.shi@ualberta.ca).
+Please have OpenRefine installed. Instructions for installation are available at [Installation](instructions/installation/README.md). If you run into any issues with installation, please get in touch with [us](mailto:weiwei.shi@ualberta.ca).
 
 ##Agenda
 1. Introduction to OpenRefine
