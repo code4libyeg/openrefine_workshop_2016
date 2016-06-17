@@ -21,7 +21,7 @@ Please have OpenRefine installed. Instructions for installation are available at
     4. Faceting
     5. Clustering
     6. [GREL](https://github.com/code4libyeg/openrefine_workshop_2016/tree/master/instructions/grel)
-5. [Data Reconciliation]()
+5. [Data Reconciliation](https://github.com/code4libyeg/openrefine_workshop_2016/tree/master/instructions/reconciliation)
 6. [Geocoding](https://github.com/code4libyeg/openrefine_workshop_2016/tree/master/instructions/geocoding)
 7. Questions + Comments (also can ask through out workshop)
 
