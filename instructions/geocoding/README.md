@@ -22,7 +22,7 @@ Steps:
    ![Create a column by fetching URLs](../screenshots/geocoding_create_column.png "Create Column")
   * In the popup window, add a column name 'geojson' for the new column
   * Use GREL to construct your API request URL (include the quotation marks). 
-	```'http://maps.googleapis.com/maps/api/geocode/json?sensor=false&address='+escape(value,'url')```
+	*'http://maps.googleapis.com/maps/api/geocode/json?sensor=false&address='+escape(value,'url')*
     escape is to encode the geolocation string into a format that is safe for URLs. 
   * We can set the wait time between each request in Open Refine. 
   * Click on "Ok" to Proceed. 
@@ -34,10 +34,10 @@ Steps:
   	![Geocoding - JSON results](../screenshots/geocoding_json_result.png "JSON Results")
   * Create new column 'longtitude' by "Add column based on this column"
   * In the 'Expression' box, add the following code
-    ```value.parseJson().results[0].geometry.location.lng```
+     *value.parseJson().results[0].geometry.location.lng*
   * Create new column 'latitude' by "Add column based on this column"
   * In the 'Expression' box, add the following code
-    ```value.parseJson().results[0].geometry.location.lat```
+     *value.parseJson().results[0].geometry.location.lat*
 3. Remove the 'geojson' column by clicking on "Edit Column" -> "Remove this column"
 
 
