@@ -12,7 +12,7 @@ Please have OpenRefine installed. Instructions for installation are available at
 ##Agenda
 1. Introduction to OpenRefine
     2. About
-    3. GREL](https://github.com/code4libyeg/openrefine_workshop_2016/tree/master/instructions/grel)
+    3. [GREL](https://github.com/code4libyeg/openrefine_workshop_2016/tree/master/instructions/grel)
 2. [Creating Project and Import Data](https://github.com/code4libyeg/openrefine_workshop_2016/tree/master/instructions/import_create)
     2. Create a project from structured data
     3. Create a project from an API call 
@@ -20,7 +20,6 @@ Please have OpenRefine installed. Instructions for installation are available at
 3. [Data Cleaning and Normalization](https://github.com/code4libyeg/openrefine_workshop_2016/tree/master/instructions/managing_data)
     4. Faceting
     5. Clustering
-    6. Extensions
 5. [Data Reconciliation](https://github.com/code4libyeg/openrefine_workshop_2016/tree/master/instructions/reconciliation)
 6. [Geocoding](https://github.com/code4libyeg/openrefine_workshop_2016/tree/master/instructions/geocoding)
 7. Questions + Comments (also can ask through out workshop)
