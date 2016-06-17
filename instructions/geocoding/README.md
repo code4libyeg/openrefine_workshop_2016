@@ -23,6 +23,7 @@ Steps:
   * In the popup window, add a column name 'geojson' for the new column
   * Use GREL to construct your API request URL (include the quotation marks). 
 	*'http://maps.googleapis.com/maps/api/geocode/json?sensor=false&address='+escape(value,'url')*
+    
     escape is to encode the geolocation string into a format that is safe for URLs. 
   * We can set the wait time between each request in Open Refine. 
   * Click on "Ok" to Proceed. 
