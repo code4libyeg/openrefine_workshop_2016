@@ -16,7 +16,7 @@ You can also create new project by importing an archive file (with extension .zi
 Once imported, the data is stored in OpenRefine's own format, and the original data file is left undisturbed.
 
 ####To import data for the workshop (import an existing OpenRefine project)
-  * download the compressed file from: https://github.com/code4libyeg/openrefine_workshop_2016/blob/master/Data/Peel-Postcards-and-Maps-16-paths.openrefine.tar.gz
+  * download the compressed file from: https://github.com/code4libyeg/openrefine_workshop_2016/blob/master/Data/peel-original.openrefine.tar.gz
   * Click 'Import Project'
   * upload the file you just downloaded in the following screen 
 
