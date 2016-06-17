@@ -68,8 +68,10 @@
 					<li>Easy-to-learn scripting language
 					</ul>
                                   </section>
+				</section>
+				<section>
+					<h3>GREL</h3>
 				  <section>
-                                        <h3>GREL</h3>
                                         <ul>
                                                 <li>GREL is the main language supported in Open Refine to allow you write powerful yet simple query to filter and transform data.</li>
                                                 <li>You can access GREL from different menus
@@ -81,6 +83,13 @@
                                         </li>
                                         </ul>
                                   </section>
+                                  <section>
+                                        <p>
+                                          GREL is designed to resemble Javascript. So you can expect basic things to work, and know how they would work:
+                                        <img data-src="images/grel.png">
+                                        </p>
+                                  </section>
+
 				  <section>
                                         <h3>GREL Basic Functions</h3>
                                         <ul>
@@ -93,7 +102,7 @@
 				</section>
 
 				<section>
-					<h2>Start a Open Refine Project</h2>
+					<h4>Start a Open Refine Project</h4>
         			     <section>
                                          <img data-src="images/create_new.png">
 				     </section>
@@ -103,6 +112,9 @@
              			     <section>
                         		<img data-src="images/parse_data.png">
 				     </section>
+				     <section>
+					<img data-src="images/import_project.png">
+				     </section>
  				     <section>
                                         <p>Rows vs Records</p>
 					<p><b>A row</b> is a single line of your project. 
@@ -111,11 +123,11 @@
 				</section>
 
 				<section>
-					<h2>Geocoding with OpenRefine</h2>
+					<h4>Geocoding with OpenRefine</h4>
  					<section>
 						<p>Fetching</p>
 						<br>
-						<p>Say your project has a column named address that contains street address, using "Add Column by Fetching URLs", and use the follow expression to fetch result from Google Geocoding API:
+						<p>Use "Add Column by Fetching URLs", and use the follow expression to fetch result from Google Geocoding API:
 						"http://maps.google.com/maps/api/geocode/json?sensor=false&address=" + escape(value, "url") 
  </p>
 					</section>
@@ -150,15 +162,6 @@
 						<p>Example: VIAF and OpenRefine</p>
 
                                 </section>
-
-				<section>
-					<h2>OpenRefine Expression Language (GREL)</h2>
-					<p>
-                                          GREL is designed to resemble Javascript. So you can expect basic things to work, and know how they would work:
-                                        <img data-src="images/grel.png">
-					</p>
-				</section>
-
 
 
 			</div>
