@@ -1,9 +1,7 @@
 # Open Refine Workshop - Code4Lib Edmonton 2016
 **June 18, 1:00–2:30pm**
-
-[Mariana Paredes-Olea](mailto:paredeso@ualberta.ca)
-
-[Weiwei Shi](mailto:weiwei.shi@ualberta.ca)
+- [Mariana Paredes-Olea](mailto:paredeso@ualberta.ca)
+- [Weiwei Shi](mailto:weiwei.shi@ualberta.ca)
 
 ## Abstract
 This tutorial is an introduction to OpenRefine, an open source tool for working with messy data. The workshop will walk through the work to normalize, transform and extend the data with web services and external data. Participants are strongly encouraged to install OpenRefine and follow along. 
