@@ -1,10 +1,10 @@
-#Data Normalization in OpenRefine
+# Data Normalization in OpenRefine
 
-##General Normalization Functions
+## General Normalization Functions
 
 OpenRefine can help with data that has internal problems. This application is great at fixing those problems while also considering the complete set of values in a dataset. Enhancing data with OpenRefine by bringing information from other sources is also possible and there are many ways to do that, like integrating data from other columns or fetching information from external services.
 
-##Common scenarios
+## Common scenarios
 
 - Identifying unique values accross a dataset
 - Identifying how many instances of a value exist in a dataset
@@ -15,12 +15,13 @@ OpenRefine can help with data that has internal problems. This application is gr
 - Enhancing data with information available elsewhere in your dataset or from an external resource.
 
 
-##Sample dataset
+## Sample dataset
 For this workshop we will use an adapted version of the [Peel's Prairie Provinces](http://peel.library.ualberta.ca/index.html) metadata. The original metadata is in MODS XML format, but for an oncoming project we extracted each field, its content and some context separately as a tab-separated value file. In other words, we 'flattened' the data by making one tabular record for each instance of each field.
 
 Because Peel collections include a very large amount of objects we extracted a sub-subset of the dataset that contains selected fields for the Postcards and Maps collections only.
 
 ![](../screenshots/postcards.png)
+
 ![](../screenshots/maps.png)
 
 Our end goal is to prepare the dataset for visualization in Tableau. To do so we will:
@@ -32,13 +33,13 @@ Our end goal is to prepare the dataset for visualization in Tableau. To do so we
 
 ## OpenRefine Basics
 
-###Layout
+### Layout
 - Presents data in tabular format
 - Each row represents a record (or part of it) in the data
 - Each column represents a type of information
 - Operations are started through column menus
 
-###Exercise 1: Basic Operations
+### Exercise 1: Basic Operations
 1) Reorder any column and remove another (we will undo this change so don't worry about losing data).
 
 ![reorder_column](../screenshots/reorder_column.png)
@@ -59,7 +60,7 @@ Our end goal is to prepare the dataset for visualization in Tableau. To do so we
 
 5) Go back to the *Facet/Filter* panel.
 
-###Exercise #2: Faceting, Clustering, and Cleaning Up Data
+### Exercise #2: Faceting, Clustering, and Cleaning Up Data
 1) Facet on the "Path" column
 
 ![facet_text](../screenshots/facet_text.png)
@@ -83,7 +84,7 @@ Our end goal is to prepare the dataset for visualization in Tableau. To do so we
 
 ![facet_calgary](../screenshots/facet_calgary.png)
 
-###Other facets
+### Other facets
 There are many other ways to facet data
 **Numeric and Timeline** facets needs numeric values, so text strings need to be converted to either a number or date format first. This option display graphs and not lists of values.
 
@@ -95,7 +96,7 @@ The **duplicates facet** returns boolean values of true and false; filtering on 
 
 The **text length** facet produces a facet based on the character count of strings in cells within the faceted column; the custom numeric facet length(value) achieves something similar; the related measure, word count, can be achieved using the custom numeric facet `length(split(value," "))`.
 
-###Excercise 3: Clustering Facet values
+### Excercise 3: Clustering Facet values
 In OpenRefine, clustering helps visualizing values that might be alternative spellings or representations of the same concept. A number of clustering algorithms are built into OpenRefine and are presented in a way that help evaluating and merging into single values. More information on clustering: [https://github.com/OpenRefine/OpenRefine/wiki/Clustering-In-Depth](https://github.com/OpenRefine/OpenRefine/wiki/Clustering-In-Depth)
 
 
@@ -108,8 +109,8 @@ You can decide to merge matched values by checking their check box, then clickin
 ![cluster_actions](../screenshots/cluster_actions.png)
 
 
-##Transformations
-###Excercise #4: Transforming data with GREL and regular expressions
+## Transformations
+### Excercise #4: Transforming data with GREL and regular expressions
 
 1) Start by executing a replace action. The column "Path" contains full MODS 'routes' for each data field. The root element 'mods' is redundant, so to make the paths a bit easier to read, we can apply a GREL transformation. In this column's menu select **Edit cells > Transform...**
 
@@ -150,10 +151,10 @@ Set the new column name as "parent" and click "OK".
 
 
 
-##[Next: Data Reconciliation](https://github.com/code4libyeg/openrefine_workshop_2016/tree/master/instructions/reconciliation)
+## [Next: Data Reconciliation](https://github.com/code4libyeg/openrefine_workshop_2016/tree/master/instructions/reconciliation)
 
 
-##Sources:
+## Sources:
 http://enipedia.tudelft.nl/wiki/OpenRefine_Tutorial
 
 http://www.meanboyfriend.com/overdue_ideas/wp-content/uploads/2014/11/Introduction-to-OpenRefine-handout-CC-BY.pdf
