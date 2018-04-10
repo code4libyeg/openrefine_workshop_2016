@@ -1,4 +1,4 @@
-###Geocoding with OpenRefine
+### Geocoding with OpenRefine
 
 Open Refine can be used to translate addresses to latitude/longtitude coordinates to plot data on maps. 
 
@@ -9,7 +9,8 @@ There are several geocoding service you can use for this purpose:
  * Yahoo BOSS Geo Services
 
 One thing to note is when using external API to extend your data, there is usually a usage limit on the number of requests you can send per day, and per second. 
-####Google Geocoding API
+
+#### Google Geocoding API
 
 Google Geocoding API request should have the following syntax:
 http://maps.googleapis.com/maps/api/geocode/json?sensor=false&address=Edmonton
@@ -50,11 +51,11 @@ If you have a lot of duplicated location to geocode:
 * Geocoding this location by direct API call, or filter result set to one record and repeat the steps above
 * Copy the geolocation information to all the other records by "Edit cells" -> "Fill down"
 
-#####Exercise 1: Geocode a location in the dataset with Google Geocoding API
+##### Exercise 1: Geocode a location in the dataset with Google Geocoding API
 
-#####Exercise 2: Geocode a location that is duplicated in the dataset
+##### Exercise 2: Geocode a location that is duplicated in the dataset
 
-####[MapQuest Nominatim Geocoding API](http://open.mapquestapi.com/nominatim/)
+#### [MapQuest Nominatim Geocoding API](http://open.mapquestapi.com/nominatim/)
 
 Based on data contributed to OpenStreetMap. It's open data and don't have preset limit on total usage per day, but a maximum of 1 request per second. To access their API, an API key is required and is available for [free](https://developer.mapquest.com/). 
 
@@ -65,10 +66,10 @@ API request for MapQuest Nominatim:
 'http://open.mapquestapi.com/nominatim/v1/search.php?key=YOUR_KEY_HERE&format=json&q=' + escape(value, 'url')
 
 
-####[Geonames](http://www.geonames.org/export/geonames-search.html)
+#### [Geonames](http://www.geonames.org/export/geonames-search.html)
 
 Geonames data is free, and with cc-by license. It has a 30,000 daily limit per application (identified by the parameter 'username'), and 2000 requests per hour.
 API request for Geonames
 http://api.geonames.org/search?name=Edmonton&username=demo
 
-#####Exercise 3 Geocode a location with another Geocoding service
+##### Exercise 3 Geocode a location with another Geocoding service
