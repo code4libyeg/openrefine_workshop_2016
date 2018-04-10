@@ -25,4 +25,4 @@ Please have OpenRefine installed. Instructions for installation are available at
 7. Questions + Comments (also can ask through out workshop)
 
 ## Tutorial Project
-Follow along with the tutorial project. You're also welcome to bring your own data & follow along working on that. 
+Follow along with the tutorial project. You're also welcome to bring your own data & work on that. 
